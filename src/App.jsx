@@ -1,9 +1,9 @@
-import Toggle from "./components/ToggleContent/Toggle";
+import FilterName from "./components/Filter/FilterName";
 
 const App = () => {
   return (
     <div>
-      <Toggle />
+      <FilterName />
     </div>
   );
 };
