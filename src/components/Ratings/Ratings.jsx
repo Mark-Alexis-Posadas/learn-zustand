@@ -8,7 +8,11 @@ const Ratings = () => {
         <button
           type="button"
           key={index}
-          className={index <= (hover || rating) ? "on" : "off"}
+          className={
+            index <= (hover || rating)
+              ? "text-yellow-200 text-[6rem]"
+              : "text-gray-500 text-[6rem]"
+          }
           onClick={() => setRatings(index)}
           onMouseEnter={() => setHover(index)}
           onMouseLeave={() => setHover(rating)}

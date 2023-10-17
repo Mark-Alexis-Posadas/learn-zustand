@@ -1,9 +1,9 @@
-import Ratings from "./components/Ratings/Ratings";
+import Toggle from "./components/ToggleContent/Toggle";
 
 const App = () => {
   return (
     <div>
-      <Ratings />
+      <Toggle />
     </div>
   );
 };
