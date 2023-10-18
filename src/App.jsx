@@ -1,9 +1,9 @@
-import FilterName from "./components/Filter/FilterName";
+import Accordion from "./components/Accordion/Accordion";
 
 const App = () => {
   return (
     <div>
-      <FilterName />
+      <Accordion />
     </div>
   );
 };
