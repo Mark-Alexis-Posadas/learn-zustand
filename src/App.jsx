@@ -1,9 +1,9 @@
-import Toggle from "./components/ToggleContent/Toggle";
+import RemoveElement from "./components/RemoveElement/RemoveElement";
 
 const App = () => {
   return (
     <div>
-      <Toggle />
+      <RemoveElement />
     </div>
   );
 };
