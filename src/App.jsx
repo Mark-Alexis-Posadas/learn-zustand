@@ -1,9 +1,9 @@
-import RemoveElement from "./components/RemoveElement/RemoveElement";
+import Tab from "./components/Tab/Tab";
 
 const App = () => {
   return (
     <div>
-      <RemoveElement />
+      <Tab />
     </div>
   );
 };
