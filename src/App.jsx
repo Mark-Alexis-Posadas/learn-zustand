@@ -1,9 +1,9 @@
-import Accordion from "./components/Accordion/Accordion";
+import Toggle from "./components/ToggleContent/Toggle";
 
 const App = () => {
   return (
     <div>
-      <Accordion />
+      <Toggle />
     </div>
   );
 };
