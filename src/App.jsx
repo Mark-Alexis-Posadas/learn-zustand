@@ -1,9 +1,9 @@
-import Tab from "./components/Tab/Tab";
+import Root from "./components/TodoVersionTwo/Root";
 
 const App = () => {
   return (
     <div>
-      <Tab />
+      <Root />
     </div>
   );
 };

@@ -1,14 +1,11 @@
-/** @type {import('tailwindcss').Config} */
+import { Config } from "tailwindcss"; // Import the Config type from tailwindcss
+
+import flowbitePlugin from "flowbite/plugin"; // Import the flowbite plugin
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {},
   },
-  plugins: [
-    // If 'flowbite/plugin' is an NPM package, you can directly import it
-    require("flowbite/plugin"),
-
-    // If 'flowbite/plugin' is a local file, use a relative path
-    // require("./path/to/flowbite/plugin"),
-  ],
+  plugins: [flowbitePlugin], // Use the imported flowbitePlugin
 };
