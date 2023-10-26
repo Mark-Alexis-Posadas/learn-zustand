@@ -1,6 +1,6 @@
 export default function TodoAddTask() {
   return (
-    <form className="bg-gray-40 shadow-lg rounded-lg p-8 w-[600px]">
+    <form className="bg-gray-40 shadow-lg rounded-lg p-8 w-[600px] absolute z-20">
       <h2>Add Todo</h2>
       <div className="flex flex-col items-start mb-3">
         <label>Title</label>
@@ -8,7 +8,7 @@ export default function TodoAddTask() {
       </div>
       <div className="flex flex-col items-start">
         <label>Status</label>
-        <select name="" id="" className="w-full">
+        <select className="w-full">
           <option value="Incomplete">Incomplete</option>
           <option value="Completed">Completed</option>
         </select>
