@@ -1,18 +1,29 @@
+import { useEffect, useRef } from "react";
 import useToggle from "./useToggle";
-
 const Toggle = () => {
-  const { isToggle, setIstoggle, isToggleText } = useToggle((state) => {
-    return {
-      isToggle: state.isToggle,
-      setIstoggle: state.setIsToggle,
-      isToggleText: state.isToggleText,
+  const { isToggle, isToggleText, setIsToggle } = useToggle();
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        // Clicked outside the container, hide the content
+        setIsToggle();
+      }
     };
-  });
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [setIsToggle]);
+
   return (
-    <div className="container mx-auto mt-6 bg-red-200 p-6">
+    <div className="container mx-auto mt-6 bg-red-200 p-6" ref={containerRef}>
       <button
-        onClick={setIstoggle}
-        className="bg-green-400 hover:bg-green-500 p-3 rounded-md w-20 text-white font-bold"
+        onClick={setIsToggle}
+        className="bg-green-400 hover-bg-green-500 p-3 rounded-md w-20 text-white font-bold"
       >
         {isToggleText}
       </button>
