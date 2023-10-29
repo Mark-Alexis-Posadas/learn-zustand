@@ -8,7 +8,9 @@ const Toggle = () => {
     const handleClickOutside = (e) => {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
         // Clicked outside the container, hide the content
-        setIsToggle();
+        if (isToggle) {
+          setIsToggle();
+        }
       }
     };
 
@@ -17,7 +19,7 @@ const Toggle = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, [setIsToggle]);
+  }, [isToggle, setIsToggle]);
 
   return (
     <div className="container mx-auto mt-6 bg-red-200 p-6" ref={containerRef}>
