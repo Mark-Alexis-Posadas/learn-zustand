@@ -17,6 +17,7 @@ export default function TodoAddTask() {
         <button>Add Task</button>
         <button>Cancel</button>
       </div>
+      <button className="absolute top-0 right-0">Close</button>
     </form>
   );
 }
