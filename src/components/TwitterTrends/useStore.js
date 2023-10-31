@@ -22,8 +22,13 @@ const data = [
     title: "Israel Embassy",
   },
 ];
-const useStore = create((state) => ({
+const useStore = create((set) => ({
   initialState: data,
+  isVisible: false,
+  setIsVisible: () =>
+    set((state) => ({
+      isVisible: !state.isVisible,
+    })),
 }));
 
 export default useStore;
