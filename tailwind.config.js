@@ -6,8 +6,6 @@ export default {
   },
   plugins: [
     // If 'flowbite/plugin' is an NPM package, you can directly import it
-    require("flowbite/plugin"),
-
     // If 'flowbite/plugin' is a local file, use a relative path
     // require("./path/to/flowbite/plugin"),
   ],

@@ -1,9 +1,9 @@
-import ToggleContent from "./components/ToggleContent/Toggle";
+import TwitterTrends from "./components/TwitterTrends/TwitterTrends";
 
 const App = () => {
   return (
     <div>
-      <ToggleContent />
+      <TwitterTrends />
     </div>
   );
 };
