@@ -1,8 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import TrendPopUp from "./PopUp"; // Rename the PopUp component
 import useStore from "./useStore";
 export default function TwitterTrends() {
   const containerRef = useRef(null);
+  const [popupPosition, setPopupPosition] = useState({ top: 0, left: 0 });
+
   const { initial, isVisible, setIsVisible } = useStore((state) => {
     return {
       initial: state.initialState,
@@ -45,12 +47,22 @@ export default function TwitterTrends() {
             </div>
             <i
               className="fa-solid fa-ellipsis text-white hover:bg-blue-300 hover:rounded-2xl p-2 hover:text-blue-900"
-              onClick={setIsVisible}
+              onClick={(e) => {
+                // Calculate the position of the ellipsis icon relative to the document
+                const iconRect = e.target.getBoundingClientRect();
+                const top = iconRect.top + window.scrollY;
+                const left = iconRect.right + window.scrollX;
+
+                setPopupPosition({ top, left });
+                setIsVisible();
+              }}
             ></i>
           </li>
         ))}
       </ul>
-      {isVisible && <TrendPopUp />} {/* Use the renamed TrendPopUp component */}
+      {isVisible && (
+        <TrendPopUp top={popupPosition.top} left={popupPosition.left} />
+      )}
     </div>
   );
 }
