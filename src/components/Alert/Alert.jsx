@@ -14,11 +14,10 @@ export default function Alert({
   textTitle,
   textDescription,
   textColor,
-  buttonColor, // new prop for specifying button color
+  buttonColor,
 }) {
   const { changeButtonColor } = useButtonStore();
 
-  // Set the button color when the component mounts
   useEffect(() => {
     changeButtonColor(buttonColor);
   }, [buttonColor, changeButtonColor]);

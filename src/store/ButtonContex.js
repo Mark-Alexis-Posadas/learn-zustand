@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useButtonStore = create((set) => ({
-  buttonColor: "red",
+  buttonColor: "",
   changeButtonColor: (color) => set({ buttonColor: color }),
 }));
 
