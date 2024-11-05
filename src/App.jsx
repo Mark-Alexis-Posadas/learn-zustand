@@ -1,9 +1,7 @@
-import Counter from "./components/CounterApp/Counter";
-
 const App = () => {
   return (
     <div>
-      <Counter />
+      <UserProfile />
     </div>
   );
 };
