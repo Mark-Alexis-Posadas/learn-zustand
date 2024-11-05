@@ -2,7 +2,8 @@ import React from "react";
 import { userUserProfile } from "./useUserProfile";
 
 export const UserProfile = () => {
-  const { userProfile, setUserProfile } = userUserProfile;
+  const { userProfile, setUserProfile } = userUserProfile();
+  console.log(userProfile);
 
   const handleProfileChange = () => {
     setUserProfile({

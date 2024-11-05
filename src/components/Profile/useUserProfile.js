@@ -1,5 +1,5 @@
 import { create } from "zustand";
-export const userUserProfile = create({
+export const userUserProfile = create((set) => ({
   userProfile: {
     firstName: "Mark Alexis",
     middleName: "Petrola",
@@ -11,4 +11,4 @@ export const userUserProfile = create({
     set((state) => ({
       userProfile: { ...state.userProfile, ...newProfile },
     })),
-});
+}));
